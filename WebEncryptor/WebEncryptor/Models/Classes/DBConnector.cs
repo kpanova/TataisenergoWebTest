@@ -17,7 +17,7 @@ namespace WebEncryptor.Models.Classes
                 context = new EncryptorContext();
             }
         }
-        public void Tables()
+        public void createTables()
         {
             if (context.Database.Exists())
             {

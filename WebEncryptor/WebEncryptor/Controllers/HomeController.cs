@@ -16,7 +16,7 @@ namespace WebEncryptor.Controllers
         public ActionResult Index()
         {
             DBConnector.getConnection();
-            DBConnector.getConnection().Tables();
+            DBConnector.getConnection().createTables();
             return View();
         }
 
