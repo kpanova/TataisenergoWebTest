@@ -21,14 +21,14 @@ namespace WebEncryptor.Models.Classes
         {
             if (context.Database.Exists())
             {
-                context.Symbols.writeToTable();
+                context.Symbols.generateEncryptTable(10);
             }
             else
             {
                 context.Database.Create();
                 context.Messages.Create();
                 context.Symbols.Create();
-                context.Symbols.writeToTable();
+                context.Symbols.generateEncryptTable(10);
             }
         }
 

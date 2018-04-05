@@ -9,6 +9,7 @@ namespace WebEncryptor
     public class Message
     {
         public Message() { }
+
         public Message(string oldMessage)
         {
             this.oldMessage = oldMessage;

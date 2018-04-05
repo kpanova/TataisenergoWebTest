@@ -18,12 +18,25 @@ namespace WebEncryptor.Classes
         
         string IEncryptor.Encrypt(string msg)
         {
+            bool upper = false;
             StringBuilder newMsg = new StringBuilder();
             foreach(var sym in msg)
             {
-                if (DBConnector.getConnection().context.Symbols.isExsistsReplace(sym.ToString()))
+                upper = false;
+                if (Char.IsUpper(sym))
                 {
-                    newMsg.Append(DBConnector.getConnection().context.Symbols.getReplace(sym.ToString()));
+                    upper = true;
+                }
+                if (DBConnector.getConnection().context.Symbols.isExsistsReplace(Char.ToLower(sym).ToString()))
+                {
+                    if (upper)
+                    {
+                        newMsg.Append(DBConnector.getConnection().context.Symbols.getReplace(Char.ToLower(sym).ToString()).ToUpper());
+                    }
+                    else
+                    {
+                        newMsg.Append(DBConnector.getConnection().context.Symbols.getReplace(sym.ToString()));
+                    }
                 }
                 else
                 {

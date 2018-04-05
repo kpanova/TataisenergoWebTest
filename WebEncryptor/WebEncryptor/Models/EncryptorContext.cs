@@ -8,7 +8,9 @@ namespace WebEncryptor
 {
     public class EncryptorContext : DbContext
     {
-        public EncryptorContext() : base("EncryptedMsgesDB5")
+
+        public static string dbName = "EncryptedMessagesDB";
+        public EncryptorContext() : base(dbName)
         {
         }
 

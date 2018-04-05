@@ -50,28 +50,3 @@
 .transparent {
     opacity: 0.2;
 }
-
-
-/*  Examples Section */
-
-.examples {
-	max-width: 700px;
-	background-color: #fff;
-	margin: 0 auto 75px;
-	padding: 30px 50px;
-	color: #4c4e56;
-}
-
-.examples-note{
-    text-align: center;
-    font-size: 14px;
-    max-width: 370px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
-    color: #7a7a7a;
-}
-
-.examples table {
-    margin: 5px 0 0 0;
-    font-size: 14px;
-}
